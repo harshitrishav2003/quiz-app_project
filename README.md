@@ -1,3 +1,7 @@
+
+https://github.com/user-attachments/assets/98133401-2063-4759-b565-09af9357a72c
+
+
 # Quiz Application
 
 This is a quiz application with gamification features. The project has both frontend and backend components.
@@ -7,6 +11,9 @@ This is a quiz application with gamification features. The project has both fron
 1. **Navigate to the backend directory:**
 
    Open your terminal and go to the `backend` directory.
+
+
+
 
 
 cd backend
@@ -26,7 +33,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also se
+The page will reload when you make changes.
 
 
