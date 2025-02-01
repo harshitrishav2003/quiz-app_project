@@ -1,0 +1,309 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Quiz Container */
+  .quiz-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px; /* Fixed width */
+    max-width: 800px; /* Max width for large screens */
+    transition: all 0.3s ease-in-out;
+    animation: container-appear 0.6s ease-out;
+  }
+  
+  /* Container Animation */
+  @keyframes container-appear {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Header for the Quiz */
+  .quiz-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fade-in 1s ease-out;
+  }
+  .question-text {
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 30px; /* Added space to the right of the question */
+  }
+  /* Fade-in Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: button-pop 0.3s ease-in-out;
+  }
+  
+  /* Button Pop Animation */
+  @keyframes button-pop {
+    from {
+      transform: scale(0.95);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Timer Styling */
+  .timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e53935;
+    text-align: center;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+    animation: fade-in 1s ease-out;
+  }
+  
+  .timer.low-time {
+    color: #ff5722;
+  }
+  
+  .timer.critical-time {
+    color: #d32f2f;
+  }
+  
+  /* Quiz Content */
+  .quiz-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fade-in 1.5s ease-out;
+  }
+  
+  /* Question Header */
+  .question-header {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fade-in 1.5s ease-out;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 80%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-top: 8px;
+    animation: progress-bar-fill 2s ease-out;
+  }
+  
+  /* Progress Bar Animation */
+  @keyframes progress-bar-fill {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Question Styling */
+  .quiz-question h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Options container */
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Option Buttons */
+  .option-btn {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: option-hover 0.3s ease-in-out;
+  }
+  
+  /* Option Button Hover Animation */
+  @keyframes option-hover {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .option-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+  }
+  
+  .option-btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Skip and Submit Buttons */
+  .skip-btn, .submit-btn {
+    background-color: #00796b;
+    color: white;
+    margin-top: 10px;
+    width: 100%; /* Make both buttons take full width of their container */
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: button-pop 0.3s ease-in-out;
+  }
+  
+  /* Skip and Submit Button Hover */
+  .skip-btn:hover, .submit-btn:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+  }
+  
+  .skip-btn:active, .submit-btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Completion Screen */
+  .quiz-completed {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .quiz-completed h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .quiz-completed p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .restart-btn {
+    background-color: #0288d1;
+  }
+  
+  .restart-btn:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Animation for Option Buttons */
+  @keyframes option-hover {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .option-btn:hover {
+    animation: option-hover 0.3s ease-in-out;
+  }
+  
+  /* Skip Button Centering */
+  .skip-btn {
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Skip Button Hover */
+  .skip-btn:hover {
+    background-color: #0277bd;
+    transform: translateY(-2px);
+  }
+  
+  .skip-btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .quiz-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .quiz-container h1 {
+      font-size: 1.8rem;
+    }
+  
+    .btn, .option-btn, .skip-btn, .submit-btn, .restart-btn {
+      font-size: 1rem;
+    }
+  
+    .quiz-question h3 {
+      font-size: 1.3rem;
+    }
+  
+    .timer {
+      font-size: 1.5rem;
+    }
+  }
+  
